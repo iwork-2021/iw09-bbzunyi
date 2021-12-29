@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--ARView-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" userLabel="ARView" customClass="ViewController" customModule="ARtank" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mrz-Ag-gBJ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <arView multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vox-mH-QIS">
+                                <rect key="frame" x="-2" y="0.0" width="414" height="896"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </arView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="SmP-QN-ro9">
+                                <rect key="frame" x="50" y="594" width="314" height="258"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Q2h-fw-aSZ">
+                                        <rect key="frame" x="0.0" y="0.0" width="314" height="124"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iZz-ji-Nz8" userLabel="TurretLeft">
+                                                <rect key="frame" x="0.0" y="0.0" width="98" height="124"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain">
+                                                    <backgroundConfiguration key="background" image="TurretLeft"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="TurretLeftPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jGf-BU-Sf5"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bF1-b0-S2k" userLabel="CannonFire">
+                                                <rect key="frame" x="108" y="0.0" width="98" height="124"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain">
+                                                    <backgroundConfiguration key="background" image="CannonFire"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="CannonFirePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xcY-UW-sYP"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wju-yA-6NL" userLabel="TurretRight">
+                                                <rect key="frame" x="216" y="0.0" width="98" height="124"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain">
+                                                    <backgroundConfiguration key="background" image="TurretRight"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="TurretRightPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8RQ-41-RZ3"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="oSl-IM-i9S">
+                                        <rect key="frame" x="0.0" y="134" width="314" height="124"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q0z-BE-DNY" userLabel="TankLeft">
+                                                <rect key="frame" x="0.0" y="0.0" width="98" height="124"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain">
+                                                    <backgroundConfiguration key="background" image="TankLeft"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="TankLeftPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="d1x-cC-bNH"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OPh-1h-uI8" userLabel="TankForward">
+                                                <rect key="frame" x="108" y="0.0" width="98" height="124"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain">
+                                                    <backgroundConfiguration key="background" image="TankForward"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="TankForwardPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mCe-QQ-ILN"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gZY-Qs-z57" userLabel="TankRight">
+                                                <rect key="frame" x="216" y="0.0" width="98" height="124"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain">
+                                                    <backgroundConfiguration key="background" image="TankRight"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="TankRightPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RSv-q6-rbL"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="F54-4T-MxX"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="SmP-QN-ro9" firstAttribute="top" secondItem="F54-4T-MxX" secondAttribute="top" constant="550" id="2dn-SA-LJN"/>
+                            <constraint firstItem="F54-4T-MxX" firstAttribute="bottom" secondItem="SmP-QN-ro9" secondAttribute="bottom" constant="10" id="HDz-gT-Glr"/>
+                            <constraint firstItem="F54-4T-MxX" firstAttribute="trailing" secondItem="SmP-QN-ro9" secondAttribute="trailing" constant="50" id="K8A-nI-Y1y"/>
+                            <constraint firstItem="SmP-QN-ro9" firstAttribute="leading" secondItem="F54-4T-MxX" secondAttribute="leading" constant="50" id="dX8-nW-HcI"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="arView" destination="vox-mH-QIS" id="GMv-cW-b2k"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="133.92857142857142"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="CannonFire" width="85.333335876464844" height="85.333335876464844"/>
+        <image name="TankForward" width="85.333335876464844" height="85.333335876464844"/>
+        <image name="TankLeft" width="85.333335876464844" height="85.333335876464844"/>
+        <image name="TankRight" width="85.333335876464844" height="85.333335876464844"/>
+        <image name="TurretLeft" width="85.333335876464844" height="85.333335876464844"/>
+        <image name="TurretRight" width="85.333335876464844" height="85.333335876464844"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
